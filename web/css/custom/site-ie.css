@@ -1,0 +1,4 @@
+.inline-ul li {
+	zoom: 1;
+	*display: inline;
+}
