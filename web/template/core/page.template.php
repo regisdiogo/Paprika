@@ -8,28 +8,31 @@
 <meta name="keywords" content="<?= isset($c[presentation\BasePresentation::PAGE_KEYWORDS]) ? $c[presentation\BasePresentation::PAGE_KEYWORDS] : '' ?>" />
 <meta name="robots" content="<?= isset($c[presentation\BasePresentation::PAGE_ALLOW_ROBOTS]) ? $c[presentation\BasePresentation::PAGE_ALLOW_ROBOTS] : '' ?>" /> 
 <link type="text/css" href="<?=\App::getInstance()->getWebDir()?>/css/custom/site.css" rel="stylesheet" />
+<link type="text/css" href="<?=\App::getInstance()->getWebDir()?>/css/core/ppk.css" rel="stylesheet" />
 <!--[if IE]>
 <link rel="stylesheet" type="text/css" href="<?=\App::getInstance()->getWebDir()?>/css/custom/site-ie.css" />
 <![endif]-->
 </head>
 <body>
 
+<? require("/../../includes/core/app.messages.php"); ?>
+
 <?
 if (isset($c[presentation\BasePresentation::TEMPLATE_INNER_FILE])) {
-	if (is_array($c[presentation\BasePresentation::TEMPLATE_INNER_FILE])) {
-		foreach ($c[presentation\BasePresentation::TEMPLATE_INNER_FILE] as $file) {
-			require($file);
-		}
-	} else {
-		require($c[presentation\BasePresentation::TEMPLATE_INNER_FILE]);
-	}
+    if (is_array($c[presentation\BasePresentation::TEMPLATE_INNER_FILE])) {
+        foreach ($c[presentation\BasePresentation::TEMPLATE_INNER_FILE] as $file) {
+            require($file);
+        }
+    } else {
+        require($c[presentation\BasePresentation::TEMPLATE_INNER_FILE]);
+    }
 }
 ?>
 
-<script type="text/javascript" src="<?=\App::getInstance()->getWebDir()?>/javascript/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="<?=\App::getInstance()->getWebDir()?>/javascript/core/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="<?=\App::getInstance()->getWebDir()?>/javascript/jquery-ui-1.8.20.custom.min.js"></script>
-<script type="text/javascript" src="<?=\App::getInstance()->getWebDir()?>/javascript/jquery.maskedinput-1.2.2.min.js"></script>
-<script type="text/javascript" src="<?=\App::getInstance()->getWebDir()?>/javascript/jquery.meio.mask.min.js"></script>
+<script type="text/javascript" src="<?=\App::getInstance()->getWebDir()?>/javascript/core/jquery.maskedinput-1.2.2.min.js"></script>
+<script type="text/javascript" src="<?=\App::getInstance()->getWebDir()?>/javascript/core/jquery.meio.mask.min.js"></script>
 <script type="text/javascript" src="<?=\App::getInstance()->getWebDir()?>/javascript/jquery.blockUI.js"></script>
 <script type="text/javascript" src="<?=\App::getInstance()->getWebDir()?>/javascript/default.js"></script>
 <script type="text/javascript">

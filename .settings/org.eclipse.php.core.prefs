@@ -1,4 +1,6 @@
-#Fri Nov 11 11:04:10 BRST 2011
+#Wed Jan 16 08:21:10 BRST 2013
 eclipse.preferences.version=1
+org.eclipse.php.core.phpForamtterIndentationSize=4
+org.eclipse.php.core.phpForamtterUseTabs=false
 phpVersion=php5.3
 useShortTags=true

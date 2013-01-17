@@ -1,8 +1,11 @@
 <?php
+error_reporting(E_ALL ^ E_WARNING);
 
-define('PAPRIKA_PATH', realpath('library'));
+define('PAPRIKA_LIBRARY_PATH', realpath('library'));
+define('PAPRIKA_CUSTOM_PATH', realpath('custom'));
+define('ROOT_PATH', dirname(__FILE__));
 
-require(PAPRIKA_PATH.'/App.php');
+require(PAPRIKA_LIBRARY_PATH.'/App.php');
 
 App::getInstance()->init();
 
