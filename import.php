@@ -8,5 +8,6 @@ define('ROOT_PATH', dirname(__FILE__));
 require(PAPRIKA_LIBRARY_PATH.'/AppUtils.php');
 
 AppUtils::getInstance()->import();
+//
 
 ?>
